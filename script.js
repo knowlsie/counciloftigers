@@ -7,15 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const video1 = '<iframe src="https://www.youtube.com/embed/yfVzFK5Wjpo?si=AiIg2FS2-ENqXR_B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
 
-    const video2 = '<iframe src="https://www.youtube.com/embed/p_T97sM9RtU?si=GfpjeSuSH_qyHiXT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+    const video2 = '<iframe src="https://www.youtube.com/embed/p_T97sM9RtU?si=GfpjeSuSH_qyHiXT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></br>';
 
     input.addEventListener('input', (e) => {
-        const value = e.target.value.trim(); // basic trim, maybe not needed if user wants exact spacing? user said "equal to", usually implies strings. I'll just value.
+        const value = e.target.value.trim().toLowerCase();
 
         if (value === 'itstigeringtime') {
             displayArea.innerHTML = video1;
         } else if (value === 'tigersarepoggers') {
-            displayArea.innerHTML = video2;
+            displayArea.innerHTML = '<div style="display:flex; flex-direction:column; align-items:center;">' + video2 + '<audio controls src="assets/AFGDEDAABCE.mp3" style="margin-top:10px;"></audio></div>';
         } else {
             // Check if we need to revert
             // If the current content is NOT the logo, and the input does NOT match a code, revert?
