@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             displayArea.innerHTML = video1;
         } else if (value === 'tigersarepoggers') {
             displayArea.innerHTML = '<div style="display:flex; flex-direction:column; align-items:center;">' + video2 + '<audio controls src="assets/AFGDEDAABCE.mp3" style="margin-top:10px;"></audio></div>';
+        } else if (value === 'ilovetigers') {
+            displayArea.innerHTML = '<audio controls src="assets/be careful.mp3" style="margin-top:10px;"></audio>';
         } else {
             // Check if we need to revert
             // If the current content is NOT the logo, and the input does NOT match a code, revert?
